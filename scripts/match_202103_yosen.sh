@@ -76,4 +76,5 @@ bash judge/test_scripts/set_running.sh localhost:5000
 
 
 # set window position
+
 bash ${SCRIPT_DIR}/set_window_pos2.sh
