@@ -1,0 +1,3 @@
+rostopic pub /cmd_vel geometry_msgs/Twist  "[0.0,0.0,0.0]" "[0.0,0.0,0.0]"
+
+

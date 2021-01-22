@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+<!-- red side robot -->
+  <include file="$(find burger_war_dev)/launch/your_burger.launch">
+    <arg name="side" value="r" />
+  </include>
+</launch>
