@@ -21,3 +21,5 @@ pkill -f final_blue.launch
 pkill -f ffmpeg
 
 pkill -f gst-launch-1.0
+
+pkill -f rqt

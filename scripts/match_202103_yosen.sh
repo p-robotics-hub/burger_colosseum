@@ -50,9 +50,12 @@ bash scripts/sim_with_judge.sh $RED_NAME $BLUE_NAME
 
 
 #echo break && read input
+sleep 10
+rqt_image_view /aruco_marker_publisher/result/compressed &
+
 
 # set window position and size
-sleep 10
+sleep 3
 bash ${SCRIPT_DIR}/set_window_pos.sh
 sleep 5
 

@@ -36,6 +36,14 @@ sleep 0.2
 xdotool mouseup 1
 sleep 0.2
 
+xdotool mousemove 565 400
+xdotool mousedown 2
+sleep 0.5
+xdotool mousemove_relative 0 100
+sleep 0.5
+xdotool mousemove_relative -- -393 0
+sleep 0.5
+xdotool mouseup 2
 
 xdotool mousemove 565 400
 sleep 0.2
@@ -63,3 +71,7 @@ xdotool windowactivate ${JUDGE}
 xdotool windowmove ${JUDGE} 0 10
 
 
+RQT=`xdotool search -onlyvisible rqt_image_view | head -1`
+xdotool windowactivate ${RQT}
+xdotool windowsize ${RQT} 500 500
+xdotool windowmove ${RQT} 780 0
