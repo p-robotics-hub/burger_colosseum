@@ -16,16 +16,8 @@ wmctrl -r Gazebo -b remove,maximized_vert,maximized_horz
 xdotool windowsize ${GAZEBOWIN} 1000 700
 xdotool windowmove ${GAZEBOWIN} 10 10
 sleep 0.2
-xdotool mousemove 980 110
-xdotool click 1
-sleep 0.2
-xdotool mousemove_relative 50 30 
-xdotool click 1
-sleep 1.5
-xdotool click 1
-sleep 2.0
 
-xdotool mousemove 330 380
+xdotool mousemove 270 380
 sleep 0.2
 xdotool click 1
 sleep 0.2
@@ -36,42 +28,27 @@ sleep 0.2
 xdotool mouseup 1
 sleep 0.2
 
-xdotool mousemove 565 400
-xdotool mousedown 2
-sleep 0.5
-xdotool mousemove_relative 0 100
-sleep 0.5
-xdotool mousemove_relative -- -393 0
-sleep 0.5
-xdotool mouseup 2
-
-xdotool mousemove 565 400
-sleep 0.2
-xdotool click 1
-sleep 1.0
-xdotool click 1
-sleep 0.5
-xdotool click 4
-sleep 0.4
-xdotool click 4
-sleep 0.4
-xdotool click 4
-sleep 0.4
-xdotool click 4
-
+xdotool key Alt+v
+xdotool key Return
+xdotool key Alt+v
+xdotool key Down
+xdotool key Return
+xdotool key Ctrl+h
 
 xdotool windowsize ${GAZEBOWIN} 700 700
-xdotool windowmove ${GAZEBOWIN} 10 150
+xdotool windowmove ${GAZEBOWIN} 10 10
 
 #xdotool windowsize ${GAZEBOWIN} 85% 100%
 #xdotool windowmove ${GAZEBOWIN} 130 10
 
 JUDGE=`xdotool search -onlyvisible "burger war"`
 xdotool windowactivate ${JUDGE}
-xdotool windowmove ${JUDGE} 0 10
+xdotool windowmove ${JUDGE} 710 10
 
 
 RQT=`xdotool search -onlyvisible rqt_image_view | head -1`
 xdotool windowactivate ${RQT}
 xdotool windowsize ${RQT} 500 500
-xdotool windowmove ${RQT} 780 0
+xdotool windowmove ${RQT} 710 160
+
+xdotool windowactivate ${JUDGE}
