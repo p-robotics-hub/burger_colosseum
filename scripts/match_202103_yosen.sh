@@ -68,7 +68,7 @@ export TURTLEBOT3_MODEL=burger
 roslaunch burger_war ${ENEMY}
 )"
 
-${SCRIPT_DIR}/record_desktop.sh ~/${RED_NAME}-${BLUE_NAME}.mp4 &
+#${SCRIPT_DIR}/record_desktop.sh ~/${RED_NAME}-${BLUE_NAME}.mp4 &
 ${SCRIPT_DIR}/record_windows.sh
 
 
