@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
 AUTO_DIR=$(cd $(dirname $0); pwd)
 SCRIPT_DIR=${AUTO_DIR}/../scripts
+source ${SCRIPT_DIR}/config.sh
 
 echo $AUTO_DIR
 echo $SCRIPT_DIR
@@ -14,7 +14,7 @@ python ${SCRIPT_DIR}/wait_end_game.py
 
 bash ${SCRIPT_DIR}/kill_burger.sh
 
-bash ${SCRIPT_DIR}/movie_panelize.sh ~/${CHALLENGER}-${ENEMY}.mp4
+bash ${SCRIPT_DIR}/movie_panelize.sh ${BURGER_DIR}/${CHALLENGER}-${ENEMY}.mp4
 
 bash ${SCRIPT_DIR}/wait_ffmpeg.sh
 

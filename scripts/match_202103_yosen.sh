@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
 # directory configuration
-BURGER_DIR=~/catkin_ws
+source ${SCRIPT_DIR}/config.sh
 ROS_SETUP=/opt/ros/melodic
 
 

@@ -15,6 +15,7 @@ function countDown() {
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 AUTO_START=${SCRIPT_DIR}/../auto_start
+source $SCRIPT_DIR/config.sh
 
 echo $SCRIPT_DIR
 echo $AUTO_START
@@ -26,12 +27,14 @@ sleep 10
 source ~/.bashrc
 
 for file in `find ${AUTO_START}/*.sh -maxdepth 1 -type f | sort`;do
+	rm -f ${TMP_DIR}/finish
 	echo $file
 	source $file
 	mv $file ${file}~
 	echo "Execution finished : " $file
 	countDown
-	sudo reboot
+	#sudo reboot
+	touch ${TMP_DIR}/finish
 	break
 done
 
