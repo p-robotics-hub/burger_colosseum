@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ENEMY=cheese
+
+source ${AUTO_START}/init_settings
+
+source ${AUTO_START}/common_script
