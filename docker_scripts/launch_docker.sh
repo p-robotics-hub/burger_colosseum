@@ -12,18 +12,12 @@ if [ ! -d $TMP_DIR ]; then
 	sudo chmod 777 $TMP_DIR
 fi
 
-rm -f $TMP_DIR/finish
 
-cd ${BURGER_DIR}/src/burger_war_dev/
-bash commands/docker-launch.sh -t sim -v $CONTAINER_VER -a "--mount type=bind,src=/mnt/tmp,dst=/mnt/tmp"
-
-sleep 5
-bash commands/kit.sh -t sim -c catkin build
-
-cd ${BURGER_DIR}/src/burger_war_dev/
-bash commands/kit.sh -t sim -c /home/developer/catkin_ws/src/burger_colosseum/scripts/autostartup_exec.sh
-
-bash ${SCRIPT_DIR}/restart_docker.sh
-bash ${SCRIPT_DIR}/restart_docker.sh
+echo ---------1st match---------
+bash ${SCRIPT_DIR}/launch_docker_wait_finish.sh
+echo ---------2nd match---------
+bash ${SCRIPT_DIR}/launch_docker_wait_finish.sh
+echo ---------3rd match---------
+bash ${SCRIPT_DIR}/launch_docker_wait_finish.sh
 
 set +x
