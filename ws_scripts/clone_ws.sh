@@ -18,8 +18,8 @@ cp -R ${SIM_DIR}/burger_war_kit .
 cp -R ${SIM_DIR}/burger_colosseum .
 
 echo Copying docker configuration files from catkin_ws_sim
-cp -R ${SIM_DIR}/burger_war_dev/docker/sim burger_war_dev/docker/
-cp ${SIM_DIR}/burger_war_dev/commands/docker-launch.sh burger_war_dev/commands/
+cp -R ${SIM_DIR}/burger_war_dev/docker/* burger_war_dev/docker/
+cp ${SIM_DIR}/burger_war_dev/commands/* burger_war_dev/commands/
 
 echo Changing work space directory
 sed -i -e "s|^HOST_WS_DIR.*|HOST_WS_DIR=${MY_DIR}|" burger_war_dev/commands/config.sh
