@@ -13,7 +13,7 @@ judge_scripts/judge_start.sh
 2. ジャッジウインドウが起動
 3. Firefoxが起動し、http://192.168.0.100:5000 へアクセス
 
-![screenshot](image/judge-browser.jpg)
+![screenshot](image/judge-browser.png)
 
 1. RESET judge
 2. SET UP
