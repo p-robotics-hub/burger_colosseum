@@ -34,6 +34,7 @@ USBカメラ、LiDAR、OpenCRボードが動くようになる。
 - 第2引数) チーム名(英字) 通常、redもしくはblueと入れている
 
 ロボット起動の前に、OpenCRボードをリセットしたほうが良い。
+次に、OpenCRのリセットをする。リセットボタンの位置は、[マニュアルを参照](https://emanual.robotis.com/docs/en/parts/controller/opencr10/#bootloader)。
 (JointState、Odometoryの値をリセットするため。Navigationを使っていないソフトウェアは影響を受ける場合がある。)
 
 例
