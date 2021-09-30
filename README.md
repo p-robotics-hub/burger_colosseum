@@ -1,6 +1,54 @@
 # burger_colosseum
 burger war 予選会用の自動対戦スクリプト
 
+# 2021年2月大会予選（Docker＋aws使用）
+## 前提
+aws上でDockerを使って実行するようにした。
+
+GPUインスタンスを使用するので、使用できるようにawsに制限緩和を申請する必要がある。
+
+## 環境構築
+以下を参考に「Swapの設定」まで行う。（Desktop環境をインストール以降は不要）
+
+https://github.com/p-robotics-hub/aws-ec2-dev-env/blob/main/README.md
+
+## Dockerインストール
+以下を参考にインストールする。
+
+https://github.com/p-robotics-hub/burger_war_dev/blob/main/STARTUP_GUIDE.md#1-%E3%83%9B%E3%82%B9%E3%83%88pc%E3%81%A7%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
+
+
+## 対戦用スクリプトを準備する
+1. cd ~/catkin_ws/src/burger_war_dev
+2. git clone https://github.com/p-robotics-hub/burger_colosseum
+3. ディレクトリ名を変えるcatkin_ws ⇒ catkin_ws_sim
+```mv catkin_ws/ catkin_ws_sim```
+4. 参加者のレポジトリーをCloneするスクリプトをHOMEディレクトリに置く（Symbolic Link）
+```ln -s ~/catkin_ws_sim/src/burger_colosseum/ws_scripts/clone_ws.sh ~/```
+
+## 対戦を実行する
+1. cd ~/
+2. ./clone_ws.sh github-repo-name
+3. cd ~/catkin_ws_github-repo-name/src/burger_colosseum/docker_scripts
+4. ./build_container.sh
+
+## 参考
+
+実行中の試合の画面の中に入る方法
+1. 5900番ポートをSSHでFORWADINGするとVNC Viewerを使ってデスクトップに入れる
+参考） https://github.com/p-robotics-hub/aws-ec2-dev-env/blob/main/README.md#vnc%E3%81%A7%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%81%AB%E6%8E%A5%E7%B6%9A
+
+コンテナを個別に起動して中に入る方法
+	1. cd ~/catkin_ws_github-repo-name/src/burger_war_dev
+	2. bash commands/docker-launch.sh -t sim -v github-repo-name
+	3. bash commands/kit.sh -t sim    # コンテナの中のターミナルに入れる
+	4. 5900番ポートをSSHでFORWADINGするとVNC Viewerを使ってデスクトップに入れる
+		# 参考） https://github.com/p-robotics-hub/aws-ec2-dev-env/blob/main/README.md#vnc%E3%81%A7%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%81%AB%E6%8E%A5%E7%B6%9A
+
+
+
+# 以下は古いドキュメント
+
 # 2020年8月大会予選
 ## 前提
 あまり大きくは変えていない。awsのec2で動かしている。
