@@ -39,10 +39,10 @@ https://github.com/p-robotics-hub/burger_war_dev/blob/main/STARTUP_GUIDE.md#1-%E
 参考） https://github.com/p-robotics-hub/aws-ec2-dev-env/blob/main/README.md#vnc%E3%81%A7%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%81%AB%E6%8E%A5%E7%B6%9A
 
 コンテナを個別に起動して中に入る方法
-	1. cd ~/catkin_ws_github-repo-name/src/burger_war_dev
-	2. bash commands/docker-launch.sh -t sim -v github-repo-name
-	3. bash commands/kit.sh -t sim    # コンテナの中のターミナルに入れる
-	4. 5900番ポートをSSHでFORWADINGするとVNC Viewerを使ってデスクトップに入れる
+1. cd ~/catkin_ws_github-repo-name/src/burger_war_dev
+2. bash commands/docker-launch.sh -t sim -v github-repo-name
+3. bash commands/kit.sh -t sim    # コンテナの中のターミナルに入れる
+4. 5900番ポートをSSHでFORWADINGするとVNC Viewerを使ってデスクトップに入れる
 		# 参考） https://github.com/p-robotics-hub/aws-ec2-dev-env/blob/main/README.md#vnc%E3%81%A7%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%81%AB%E6%8E%A5%E7%B6%9A
 
 
