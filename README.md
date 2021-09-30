@@ -31,6 +31,8 @@ https://github.com/p-robotics-hub/burger_war_dev/blob/main/STARTUP_GUIDE.md#1-%E
 2. ./clone_ws.sh github-repo-name
 3. cd ~/catkin_ws_github-repo-name/src/burger_colosseum/docker_scripts
 4. ./build_container.sh
+5. ./launch_docker.sh
+6. 全て終わると、~/catkin_ws_github-repo-name/　にmp4ファイルができている
 
 ## 参考
 
