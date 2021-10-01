@@ -25,7 +25,10 @@ https://github.com/p-robotics-hub/burger_war_dev/blob/main/STARTUP_GUIDE.md#1-%E
 ```mv catkin_ws/ catkin_ws_sim```
 4. 参加者のレポジトリーをCloneするスクリプトをHOMEディレクトリに置く（Symbolic Link）
 ```ln -s ~/catkin_ws_sim/src/burger_colosseum/ws_scripts/clone_ws.sh ~/```
-
+5. 初期のカメラ視点を変更する（デフォルトでもよいが変更すると見栄えが良い）
+    1. "~/catkin_ws_sim/src/burger_war_kit/burger_war/world/burger_field.world"の１６行目を編集 https://github.com/p-robotics-hub/burger_war_kit/blob/main/burger_war/world/burger_field.world#L16
+    2. 下記に変更する ```<pose>0.0 0.0 3.0 -1.57 1.57 0.0</pose>```
+    
 ## 対戦を実行する
 1. cd ~/
 2. ./clone_ws.sh github-repo-name
@@ -33,6 +36,7 @@ https://github.com/p-robotics-hub/burger_war_dev/blob/main/STARTUP_GUIDE.md#1-%E
 4. ./build_container.sh
 5. ./launch_docker.sh
 6. 全て終わると、~/catkin_ws_github-repo-name/　にmp4ファイルができている
+7. ~/catkin_ws_github-repo-name/src/burger_war_kit/judge/log/game_result.log　に結果が格納されている
 
 ## 参考
 
