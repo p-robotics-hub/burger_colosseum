@@ -19,7 +19,7 @@ https://github.com/p-robotics-hub/burger_war_dev/blob/main/STARTUP_GUIDE.md#1-%E
 
 
 ## 対戦用スクリプトを準備する
-1. cd ~/catkin_ws/src/burger_war_dev
+1. cd ~/catkin_ws/src/
 2. git clone https://github.com/p-robotics-hub/burger_colosseum
 3. ディレクトリ名を変えるcatkin_ws ⇒ catkin_ws_sim
 ```mv catkin_ws/ catkin_ws_sim```
