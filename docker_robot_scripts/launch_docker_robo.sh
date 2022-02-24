@@ -24,6 +24,8 @@ bash commands/docker-launch.sh -f -t robo -v $CONTAINER_VER
 sleep 5
 bash commands/kit.sh -t robo -c catkin build
 sleep 5
+bash commands/kit.sh -t robo -c /home/developer/catkin_ws/src/burger_colosseum/robot_scripts/fix_permission.sh
+sleep 5
 bash commands/kit.sh -t robo -c /home/developer/catkin_ws/src/burger_colosseum/robot_scripts/burger_startup.sh $SIDE_S
 
 
